@@ -1,0 +1,48 @@
+#Application Configuration Rest API 2 
+server:
+  port: 8091
+  error:
+    include-message: always
+    include-binding-errors: always
+
+spring:
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+
+  security:
+    user:
+      name: admin
+      password: 1234
+
+  # ===============================
+  # DB GOOGLE CLOUD
+  # ===============================
+  cloud:
+    gcp:
+      sql:
+        database-name: springapidb
+        instance-connection-name: springbootapiestudio:southamerica-east1:jaiderdbestudio
+
+  # ===============================
+  # DB
+  # ===============================
+  datasource:
+    username: postgres
+    password: Cachir@123+-*
+
+  # ===============================
+  # JPA / HIBERNATE
+  # ===============================
+  jpa:
+    show-sql: true
+    database: postgresql
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+    level: org.springframework.web=DEBUG
+
