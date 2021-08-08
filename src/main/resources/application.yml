@@ -18,11 +18,11 @@ spring:
   # ===============================
   # DB GOOGLE CLOUD
   # ===============================
-  cloud:
-    gcp:
-      sql:
-        database-name: springapidb
-        instance-connection-name: springbootapiestudio:southamerica-east1:jaiderdbestudio
+  #cloud:
+  #  gcp:
+  #    sql:
+  #      database-name: productosdb
+  #      instance-connection-name: rising-footing-320816:us-central1:restapi2db
 
   # ===============================
   # DB
@@ -30,6 +30,7 @@ spring:
   datasource:
     username: postgres
     password: Cachir@123+-*
+    url:      jdbc:postgresql://34.72.183.169:5432/productosdb
 
   # ===============================
   # JPA / HIBERNATE
